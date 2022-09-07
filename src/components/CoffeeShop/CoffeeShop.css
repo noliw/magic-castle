@@ -1,0 +1,21 @@
+.CoffeeShop {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /* align-items: center; */
+}
+
+.CoffeeShop:hover:after {
+    content: 'Click for Details';
+}
+
+.shop-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.places-icon {
+    height: 20px;
+}

@@ -1,0 +1,36 @@
+.LandingPage-wrapper {
+    background: -webkit-linear-gradient();
+    background: -moz-linear-gradient();
+    background: -o-linear-gradient();
+    background: linear-gradient(rgb(235, 238, 239), rgb(201, 202, 205));
+    height: 90vh;
+}
+
+.LandingPage {
+    background-image: url("../../assets/cup-and-beans.jpg");
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-shadow: #FFF 2px 2px 0;
+    height: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+    .LandingPage {
+        align-items: flex-end;
+        text-align: end;
+        padding-right: 15px;
+        text-shadow: none;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .LandingPage {
+        font-size: 2rem;
+        max-width: 1450px;
+    }
+}

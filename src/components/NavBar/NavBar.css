@@ -1,0 +1,40 @@
+.nav-bar {
+    background-color: #303439;
+    height: 85px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-name-link {
+  display: flex;
+  text-decoration: none;
+}
+
+.logo {
+  height: 85px;
+}
+
+.app-name {
+  color: whitesmoke;
+  align-self: center;
+}
+
+.nav-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-right: 10px;
+}
+
+.nav-link {
+  color: whitesmoke;
+  list-style-type: none;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .nav-link {
+    text-align: start;
+  }
+}

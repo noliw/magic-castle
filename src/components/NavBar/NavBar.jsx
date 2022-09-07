@@ -1,22 +1,34 @@
-import { Link } from 'react-router-dom';
-import * as userService from '../../utilities/users-service';
+import React from "react";
+import {Link} from 'react-router-dom';
+import './NavBar.css';
 
-export default function NavBar({ user, setUser }) {
-
-  function handleLogOut() {
-    userService.logOut();
-    setUser(null);
-  }
-
+const NavBar = ({ user, handleLogout }) => {
   return (
-    <nav>
-      <Link to='/orders'>Order History</Link>
-      &nbsp; | &nbsp;
-      <Link to='/orders/new'>New Order</Link>
-      &nbsp; | &nbsp;
-      Welcome, {user.name}
-      &nbsp; | &nbsp;
-      <Link to='' onClick={handleLogOut}>Log Out</Link>
+    <nav className="nav-bar">
+      <div className="logo-name-wrapper">
+        <Link to="/" className="logo-name-link">
+          <img 
+          src="https://i.imgur.com/J0GyZIF.png" 
+          alt="Locally Caffeinated Logo"
+          className="logo"/>
+          <h1 className="app-name">Locally Caffeinated</h1>
+        </Link>
+      </div>
+      <Link to="/search" className="nav-link underline">Search for Coffee Shops</Link>
+      {user ? 
+        <div className="nav-wrapper">
+          <Link to={`/user/${user._id}`} className="nav-link underline">Welcome, {user.name}</Link>
+          <Link to=" " onClick={handleLogout} className="nav-link underline">Log Out</Link>
+          <Link to="/search" className="nav-link underline">Search</Link>
+        </div>
+        :
+        <div className="nav-wrapper">
+          <Link to="/login" className="nav-link underline">Log In</Link>
+          <Link to="/signup" className="nav-link underline">Sign Up</Link>
+        </div>
+      }
     </nav>
   );
-}
+};
+
+export default NavBar;
