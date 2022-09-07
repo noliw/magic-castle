@@ -1,16 +1,12 @@
-const express = require('express');
-const router = express.Router();
-const authCtrl = require('../controllers/auth');
+import { Router } from 'express'
+import * as authCtrl from '../controllers/auth.js'
 
-router.post('/signup', authCtrl.signup);
-router.post('/login', authCtrl.login);
-router.get('/user/:id', authCtrl.show);
+const router = Router()
 
-router.use(require('../config/auth'));
+/*---------- Public Routes ----------*/
+router.post('/signup', authCtrl.signup)
+router.post('/login', authCtrl.login)
 
-function checkAuth(req, res, next) {
-    if (req.user) return next();
-    return res.status(401).json({msg: 'Not Authorized'});
-}
+/*---------- Protected Routes ----------*/
 
-module.exports = router;
+export { router }

@@ -1,70 +1,118 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import userService from '../../services/userService';
-import './SignupForm.css';
-import { signup } from '../../services/userService';
+import { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import '../../components/SignupForm/SignupFormStyle.css'
+import * as authService from '../../services/authService'
 
-const SignupForm = ({ history, handleSignupOrLogin, updateMessage }) => {
+import Avatars from '../../pages/Avatars/Avatars'
+import cat from '../../assets/avatars/cat.png'
 
-  const [signupInfo, setSignupInfo] = useState({
+const SignupForm = props => {
+  const navigate = useNavigate()
+  const [popup, setPopup] = useState(false)
+  const [msg, setMsg] = useState('')
+  const [formData, setFormData] = useState({
     name: '',
     email: '',
     password: '',
-    passwordConf: ''
+    avatar: cat
   })
 
-  const handleChange = (e) => {
-    updateMessage('');
-    setSignupInfo({ ...signupInfo, [e.target.name]: e.target.value })
+  const handlePopup = () => {
+    setPopup(!popup)
   }
 
-  const handleSubmit = async (evt) => {
-    evt.preventDefault();
-    try {
-      const formData = { ...this.state };
-      delete formData.confirm;
-      delete formData.error;
-      const user = await signup(formData);
-      this.props.setUser(user);
-    } catch {
-      // An error occurred, like a dup email address
-      this.setState({ error: 'Sign Up Failed - Try Again' });
-    }
-  };
+  const handleChange = e => {
+    setMsg('')
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    })
+  }
 
-  const isFormInvalid = () => {
-    return !(signupInfo.name && signupInfo.email && signupInfo.password === signupInfo.passwordConf);
+  const handleSubmit = async e => {
+    e.preventDefault()
+    try {
+      await authService.signup(formData)
+      props.handleSignupOrLogin()
+      navigate('/posts')
+    } catch (err) {
+      props.updateMessage(err.message)
+    }
   }
 
   return (
-    <div className="SignupFormComp">
-      <h1 className="signup-title">Sign Up</h1>
-      <br />
-      <form className="signup-form" autoComplete="off" onSubmit={handleSubmit} >
-        <div className="signup-input-wrapper">
-          <label htmlFor="name" className="signup-label">Name: </label>
-          <input type="text" autoComplete="off" className="active signup-input" id="name" value={signupInfo.name} name="name" onChange={handleChange} />
+    <div className="signup-page">
+      {popup &&
+        <Avatars
+          formData={formData}
+          handleChange={handleChange}
+          handlePopup={handlePopup}
+        />
+      }
+
+        <div className='form-container'>
+          <div className="title-container">
+            <h1>Create an Account</h1>
+            {msg
+              ? <h3>{msg}</h3>
+              : <h3>Start sharing your feels</h3>
+            }
+
+          </div>
+
+          <form className="register-form" onSubmit={handleSubmit}>
+            <input
+              required
+              name="name"
+              type="text"
+              autoComplete="off"
+              placeholder="Username"
+              onChange={handleChange}
+              value={formData.name}
+            />
+            <input
+              required
+              name="email"
+              type="email"
+              autoComplete="off"
+              placeholder="Email"
+              onChange={handleChange}
+              value={formData.email}
+            />
+            <input
+              required
+              name="password"
+              type="password"
+              autoComplete="off"
+              placeholder="Password"
+              onChange={handleChange}
+              value={formData.password}
+            />
+
+            <button
+              type="button"
+              autoComplete="off"
+              id="avatar-button"
+              onClick={handlePopup}
+            >Select Avatar</button>
+
+            <button
+              autoComplete="off"
+              id="submit-button"
+              type="submit"
+            >SIGN UP</button>
+          </form>
+          <div className="redirect-container">
+            <p>Already have an account?</p>
+            <Link className="redirect-link" to="/login">
+              Log In
+            </Link>
+          </div>
+
         </div>
-        <div className="signup-input-wrapper">
-          <label htmlFor="email" className="signup-label">Email: </label>
-          <input type="text" autoComplete="off" className="active signup-input" id="email" value={signupInfo.email} name="email" onChange={handleChange} />
-        </div>
-        <div className="signup-input-wrapper">
-          <label htmlFor="password" className="signup-label">Password: </label>
-          <input type="password" autoComplete="off" className="active signup-input" id="password" value={signupInfo.password} name="password" onChange={handleChange} />
-        </div>
-        <div className="signup-input-wrapper">
-          <label htmlFor="passwordConf" className="signup-label">Confirm Password: </label>
-          <input type="password" autoComplete="off" className="active signup-input" id="confirm" value={signupInfo.passwordConf} name="passwordConf" onChange={handleChange} />
-        </div>
-        <br />
-        <div className="signup-btn-wrapper">
-          <button className="btn pos-btn" disabled={isFormInvalid()}>Sign Up</button>
-          <Link to="/" className="btn neg-btn">Cancel</Link>
-        </div>
-      </form>
+
     </div>
-  );
+  )
 }
 
-export default SignupForm;
+export default SignupForm

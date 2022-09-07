@@ -1,0 +1,112 @@
+.comment-section {
+  width: 750px;
+}
+.card-header {
+  display: flex;
+  flex-direction: column;
+  border: solid 1px black;
+  box-shadow: 5px 5px 5px rgb(80, 79, 79);
+  border-radius: 10px;
+  background-color: rgba(218, 218, 222, 0.797);
+  margin-bottom: 50px;
+  margin-left: 20px;
+}
+.create-form {
+  margin-bottom: 60px;
+}
+
+.form-div{
+  display: flex;
+  flex-direction: column;
+  height: 275px;
+  border-bottom: solid 1px black;
+}
+
+.comment {
+  display: flex;
+  border-bottom: solid 1px black;
+}
+
+.comment-section h2{
+  justify-content: center;
+  text-align: center;
+  font-size: 4rem;
+  margin-top: 20px;
+}
+
+.form-div h2 {
+  text-align: left;
+  padding-left: 255px;
+}
+
+.form-div textarea{
+  margin-top: 45px;
+  margin-left: 150px;
+  width: 400px;
+  height: 100px;
+  padding: 5px 0 0 10px;
+}
+
+.form-div button {
+  width: 100px;
+  margin: 35px;
+  background: #5095e9;
+  border: none;
+  border-radius: 7px;
+  color: white;
+  font-weight: bold;
+}
+
+.comment img {
+  height: 100px;
+  margin: 20px;
+}
+
+.comment h3 {
+  margin: 80px 20px 0 20px;
+  text-align: center;
+  font-size:3rem;
+  text-decoration: none;
+}
+
+.comment a {
+  text-decoration: none;
+  color: black;
+}
+
+.comment p {
+  margin: 15px 30px;
+  text-align: justify;
+  width: 311px;
+  font-size: 20px;
+}
+
+.comment button {
+  margin-top: 20px;
+  width: 100px;
+  margin: 45px;
+  background: rgb(255, 54, 54);
+  border: none;
+  border-radius: 7px;
+  color: white;
+  font-weight: bold;
+}
+
+.comment a:hover {
+  color: #3185eb;
+}
+
+.deleteBtn{
+  margin-left: 10px;
+  background: rgb(255, 54, 54);
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 7px;
+  transition: all 0.3s;
+}
+
+.deleteBtn:hover{
+  background-color: white;
+  color: rgb(255, 54, 54);
+}

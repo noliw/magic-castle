@@ -1,0 +1,113 @@
+.btnWrapper{
+  display: flex;
+}
+
+.closeBtn{
+  width: 20px;
+}
+
+.close-block{
+  background-color: red;
+  position: absolute;
+  width:55px;
+  height: 40px;
+  border-bottom-right-radius: 10px;
+}
+
+header h1{
+  color: blue;
+  font-weight: 900;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+header{
+  margin: 0;
+}
+
+header .hamburger{
+  padding-left: 20px;
+  font-size: 50px;
+}
+
+header .close-block{
+  display: flex;
+}
+
+header .closeBtn{
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 20px;
+  font-size: 30px;
+}
+
+header .logo-block{
+  display: flex;
+  justify-content: center;
+  
+}
+
+header .logo{
+  width: 100px;
+  padding-top: 10%;
+  padding-bottom: 3%;
+  
+}
+
+.link-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.link-wrapper svg{
+  font-size: 2.5rem;
+}
+
+.sidenav{
+  width: 250px;
+  background-color: rgba(111, 128, 144, 0.9);
+  position: absolute;
+  min-height: 100vh;
+  padding: 0;
+  transition: ease-in-out 0.5s;
+  left: -100%;
+  z-index: 1;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.sidenav.active{
+  left: 0;
+}
+
+ul{
+  padding: 0;
+}
+
+ul li{
+  list-style-type: none;
+  margin: 10px 0;
+}
+
+ul li a{
+  color: aliceblue;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  display: block;
+  padding: 10px 15px;
+  transition: all 0.25s;
+  
+}
+
+ul li a svg{
+  margin-right: 15px;
+}
+
+ul li a:hover,
+ul li a.active{
+  background-color: aliceblue;
+  color: rgba(111, 128, 144, 0.9);
+}
+

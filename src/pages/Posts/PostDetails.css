@@ -1,0 +1,142 @@
+.post-details{
+  width: 100vw;
+  height:100vh;
+  padding-top: 50px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.leftContainer {
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.postInfo {
+  justify-content: center;
+  align-content: center;
+}
+
+.postTitle {
+  padding-top: 20px;
+}
+
+.postTags {
+  margin-left: 10px;
+}
+
+.postUser {
+  display: inherit;
+  align-self: flex-start;
+  padding-left: 10px;
+  border: solid 1px black;
+  box-shadow: 5px 5px 5px rgb(80, 79, 79);
+  border-radius: 10px;
+  background-color: rgba(218, 218, 222, 0.797);
+  margin: 30px 0 0 0;
+}
+
+.postImage {
+  width: 45%;
+  overflow: hidden;
+  box-shadow: 5px 5px 5px rgb(80, 79, 79);
+  border-radius: 10px;
+}
+
+.postInfoDiv {
+  background-color: rgba(218, 218, 222, 0.797);
+  border-radius: 10px;
+  margin: 40px 80px 40px 5%;
+  border: solid 1px black;
+  box-shadow: 5px 5px 5px rgb(80, 79, 79);
+  width: 85%;
+
+}
+
+.postUser button {
+  margin: 35px;
+  background: #5095e9;
+  border: none;
+  border-radius: 7px;
+  padding: 0 20px;
+}
+
+.postUser a{
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.postUser img{
+  height: 125px;
+  padding: 15px;
+}
+
+.postUser h2{
+  padding-top: 50px;
+  margin: 0 30px 0 20px;
+  font-size: 3rem;
+  color: black;
+}
+
+.postInfo h1{
+  font-size: 4rem;
+  text-align: center;
+  color: black;
+  text-decoration: underline;
+  background-color: rgba(218, 218, 222, 0.797);
+  border: solid 1px black;
+  box-shadow: 5px 5px 5px rgb(80, 79, 79);
+  border-radius: 10px;
+  padding: 30px;
+  margin-top: 30px;
+}
+
+.postBody p{
+  font-size: 2rem;
+  text-align: left;
+  margin: 20px;
+  padding: 30px
+}
+
+.postTags p{
+  display: flex;
+  font-size: 2rem;
+  padding: 0 5px;
+}
+
+.leftContainer h2{
+  text-align: center;
+}
+
+.leftContainer header{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.postImage img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.postUser .updateBtn{
+  margin: 35px;
+  padding: 0 20px;
+  background: #5095e9;
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 7px;
+  transition: all 0.3s;
+}
+
+.postUser .updateBtn:hover{
+  background-color: white;
+  color: #5095e9;
+}
+
+.postUser .updateBtnLink:hover{
+  color: #5095e9;
+}

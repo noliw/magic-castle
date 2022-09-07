@@ -1,65 +1,41 @@
-body {
-  margin: 0;
+html {
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
+}
+
+*,
+*::before,
+*::after { 
+  box-sizing: inherit;
+}
+
+:root {
+    font-size: 62.5%
+}
+
+html, body, #root {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: 'Source Sans Pro', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: whitesmoke;
+  display: flex;
+  font-size: 20px;
+  min-height: 100vh;
+  width: 100vw;
+  background-image: url('./assets/logo/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-attachment: fixed;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
 
-.underline:after {
-  content: '';
-  width: 0; 
-  height: 1px;
-  display: block;
-  right: 0;
-  background: rgb(145, 145, 145);
-  -webkit-transition: width .3s ease, content .3s ease-in;
-  -moz-transition: width .3s ease, content .3s ease-in;
-  -o-transition: width .3s ease, content .3s ease-in;
-  transition: width .3s ease, content .3s ease-in;
-}
-
-.underline:hover:after {
-  text-align: end;
-  width: 100%;
-  left: 0;
-  background: rgb(187, 187, 187);
-}
-
-h1 {
-  font-family: 'Fredericka the Great', sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-}
-
-.btn {
-  font-family: 'Open Sans', sans-serif;
-  text-decoration: none;
-  border-radius: 10%;
-  font-size: large;
-}
-
-.pos-btn {
-  background-color: rgba(245, 245, 245, 0.9);
-  border: 1px solid black;
-}
-
-.neg-btn {
-  padding: 1px 5px;
-  background-color: rgba(189, 37, 32, .74);
-  color: inherit;
-}
-
-.neg-btn:hover {
-  color: rgba(189, 37, 32, .74);
-  background-color: whitesmoke;
-  font-weight: 900;
+#root{
+  overflow-y: hidden;
+  height: 100vh;
 }

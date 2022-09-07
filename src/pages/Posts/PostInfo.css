@@ -1,0 +1,14 @@
+.postUser .deleteBtn{
+  margin-left: 10px;
+  background: rgb(255, 54, 54);
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 7px;
+  transition: all 0.3s;
+}
+
+.postUser .deleteBtn:hover{
+  background-color: white;
+  color: rgb(255, 54, 54);
+}
