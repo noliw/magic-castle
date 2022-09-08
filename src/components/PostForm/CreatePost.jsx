@@ -10,7 +10,7 @@ import { createPost } from '../../services/postService'
 const CreatePost = (props) => {
 
   const navigate = useNavigate()
-  const [image, setImage ] = useState('')
+  const [image, setImage] = useState('')
   const [title, setTitle] = useState('')
   const [body, setBody] = useState('')
   const [tags, setTags] = useState('')
@@ -18,9 +18,9 @@ const CreatePost = (props) => {
   const formData = {
     title: title,
     image: image,
-    body: body, 
+    body: body,
     tags: tags,
-    added_by: props.user.profile, 
+    added_by: props.user.profile,
   }
 
   const handleCreatePost = async (finalFormData) => {
@@ -38,9 +38,9 @@ const CreatePost = (props) => {
         const data = new FormData()
         data.append('file', image)
         data.append("upload_preset", "rkjmljnm")
-        data.append('folder', 'allthefeels')
-        data.append("cloud_name","allthefeels")
-        const res = await (await fetch("https://api.cloudinary.com/v1_1/allthefeels/image/upload", {
+        data.append('folder', 'magiccastle')
+        data.append("cloud_name", "magiccastle")
+        const res = await (await fetch("https://api.cloudinary.com/v1_1/magiccastle/image/upload", {
           method: "post",
           body: data
         })).json()
@@ -55,22 +55,22 @@ const CreatePost = (props) => {
 
   return (
     <div className="layout">
-    <PostForm
-      title={title}
-      setTitle={setTitle}
+      <PostForm
+        title={title}
+        setTitle={setTitle}
 
-      body={body}
-      setBody={setBody}
+        body={body}
+        setBody={setBody}
 
-      tags={tags}
-      setTags={setTags}
+        tags={tags}
+        setTags={setTags}
 
-      setImage={setImage}
+        setImage={setImage}
 
-      handleCreatePost={handleCreatePost}
-      handleSubmit={handleSubmit}
-    />
-  </div>
+        handleCreatePost={handleCreatePost}
+        handleSubmit={handleSubmit}
+      />
+    </div>
   )
 }
 
