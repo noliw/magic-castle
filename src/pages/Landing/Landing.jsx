@@ -7,7 +7,8 @@ const Landing = () => {
   return (
     <div className="landing-page">
       <div className="landing-elements">
-        {/* <img className="logo-splash" src={Logo} alt="logo"></img> */}
+        <h1>MAGIC     CASTLE</h1>
+        <h3>SignUp/Login below to enter the a magical world</h3>
         <div className="landing-button-container">
           <button><Link to="/signup">Sign Up</Link></button>
           <button><Link to="/login">Log In</Link></button>

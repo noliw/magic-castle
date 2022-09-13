@@ -6,21 +6,18 @@ import { BsPerson, BsPersonPlus } from 'react-icons/bs'
 import { AiOutlinePlusCircle } from 'react-icons/ai'
 import { BiLogOut } from 'react-icons/bi'
 import { VscSignIn } from 'react-icons/vsc'
-import'../SideNavbar/SideNavbar.css'
+import '../SideNavbar/SideNavbar.css'
 
 
-const SideNavbar = ({ user, handleLogout, showNav, setShowNav}) =>{
+const SideNavbar = ({ user, handleLogout, showNav, setShowNav }) => {
 
-return(
-  <>
+  return (
+    <>
       {user ?
         <nav className={showNav ? 'sidenav active' : 'sidenav'}>
-            <div className='close-block'>
-              <img src={xLogo} alt='x-icon' onClick={() => setShowNav(!showNav)} className='closeBtn'/>
-            </div>
-            <div className='logo-block'>
-              <img src={logo} alt="logo" className='logo'/>
-            </div>
+          <div className='close-block'>
+            <img src={xLogo} alt='x-icon' onClick={() => setShowNav(!showNav)} className='closeBtn' />
+          </div>
 
           <ul className='link-wrapper' onClick={() => setShowNav(!showNav)}>
             <li><Link to="/posts"><GoHome /> Home</Link></li>
@@ -29,14 +26,14 @@ return(
             <li><Link to="" onClick={handleLogout}><BiLogOut /> Log Out</Link></li>
           </ul>
         </nav>
-      :
-        <nav className={showNav ? 'sidenav active' : 'sidenav'}>  
-        <div className='close-block'>
-          <img src={xLogo} alt='x-icon' onClick={() => setShowNav(!showNav)} className='closeBtn'/> 
-            </div>
-            <div className='logo-block'>
-              <img src={logo} alt="logo" className='logo'/>
-            </div>
+        :
+        <nav className={showNav ? 'sidenav active' : 'sidenav'}>
+          <div className='close-block'>
+            <img src={xLogo} alt='x-icon' onClick={() => setShowNav(!showNav)} className='closeBtn' />
+          </div>
+          <div className='logo-block'>
+            <img src={logo} alt="logo" className='logo' />
+          </div>
           <ul className='link-wrapper' onClick={() => setShowNav(!showNav)}>
             <li><Link to="/posts"><GoHome /> Home</Link></li>
             <li><Link to="/login"><VscSignIn /> Log In</Link></li>

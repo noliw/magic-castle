@@ -38,9 +38,9 @@ const CreatePost = (props) => {
         const data = new FormData()
         data.append('file', image)
         data.append("upload_preset", "rkjmljnm")
-        data.append('folder', 'magiccastle')
-        data.append("cloud_name", "magiccastle")
-        const res = await (await fetch("https://api.cloudinary.com/v1_1/magiccastle/image/upload", {
+        data.append('folder', 'allthefeels')
+        data.append("cloud_name", "allthefeels")
+        const res = await (await fetch("https://api.cloudinary.com/v1_1/allthefeels/image/upload", {
           method: "post",
           body: data
         })).json()

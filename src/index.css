@@ -4,15 +4,17 @@ html {
 
 *,
 *::before,
-*::after { 
+*::after {
   box-sizing: inherit;
 }
 
 :root {
-    font-size: 62.5%
+  font-size: 62.5%
 }
 
-html, body, #root {
+html,
+body,
+#root {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
@@ -23,7 +25,7 @@ html, body, #root {
   font-size: 20px;
   min-height: 100vh;
   width: 100vw;
-  background-image: url('./assets/logo/background.jpg');
+  background-image: url('./assets/logo/istockphoto-1133458949-170667a.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left top;
@@ -35,7 +37,7 @@ code {
     monospace;
 }
 
-#root{
+#root {
   overflow-y: hidden;
   height: 100vh;
 }
