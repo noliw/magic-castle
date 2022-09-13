@@ -11,7 +11,7 @@ The <a href="https://trello.com/b/3P8F6JVw/p4-magic-castle">trello Board</a> to 
 
 ![landing page]<img src="https://imgur.com/a/yIOPKTi">()
 
-![create post page]<img src=https://imgur.com/KZEtkZH">()
+![create post page][Imgur](https://imgur.com/mtLPRbb)
 
 
 <br>
