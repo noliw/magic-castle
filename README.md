@@ -9,7 +9,8 @@ The <a href="https://trello.com/b/3P8F6JVw/p4-magic-castle">trello Board</a> to 
 
 <h2>Screenshots</h2>
 
-![landing page]<img src="https://imgur.com/a/yIOPKTi">()
+![landing page]<img src="https://i.imgur.com/mtLPRbb.jpg">
+
 
 ![create post page]<img src="https://imgur.com/mtLPRbb">
 
