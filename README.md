@@ -1,18 +1,18 @@
 <h1>Magic Castle</h1>
 
-<a href="https://magic-castle.herokuapp.com/">Magic Castle</a> is webapp dedicated to kids were you can upload your kids drawings, pictures and progress.  
+<a href="https://magic-castle.herokuapp.com/">Magic Castle</a> is a magical place for kids. In this castle you can share yourr drawings, sketches, doodles, stories, and feelings.
 
 <br>
 
-The <a href="https://trello.com/b/3P8F6JVw/p4-magic-castle">trello Board</a> to view our ERD and wireframe.
+The <a href="https://trello.com/b/3P8F6JVw/p4-magic-castle">trello Board</a> to view ERD and Wireframe.
 <br>
 
 <h2>Screenshots</h2>
 
-![landing page]<img src="https://i.imgur.com/mtLPRbb.jpg">
+<img src="https://i.imgur.com/mtLPRbb.jpg">
 
 
-![create post page]<img src="https://i.imgur.com/KZEtkZH.png">
+<img src="https://i.imgur.com/KZEtkZH.png">
 
 
 <br>
