@@ -1,10 +1,10 @@
 <h1>Magic Castle</h1>
 
-<a href="https://magic-castle.herokuapp.com/">Magic Castle</a> is a magical place for kids. In this castle you can share yourr drawings, sketches, doodles, stories, and feelings.
+<a href="https://magic-castle.herokuapp.com/">Magic Castle</a> is a magical place made for kids. In this castle you can share your drawings, sketches, doodles, stories, and feelings.
 
 <br>
 
-The <a href="https://trello.com/b/3P8F6JVw/p4-magic-castle">trello Board</a> to view ERD and Wireframe.
+The <a href="https://trello.com/b/3P8F6JVw/p4-magic-castle">Trello Board</a> to view ERD and Wireframe.
 <br>
 
 <h2>Screenshots</h2>
