@@ -36,5 +36,5 @@ The <a href="https://trello.com/b/3P8F6JVw/p4-magic-castle">Trello Board</a> to 
 <ul>
   <li>Add a search function to allow us to find posts via the tags.</li>
   <li>Add a feature to favorite a post.</li>
-  <li>AMake the site mobile responsive.</li>
+  <li>Make the site responsive.</li>
 </ul>
